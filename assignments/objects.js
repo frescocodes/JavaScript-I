@@ -47,7 +47,7 @@ const gannie = {
 }
 const antonietta = {
   id: 5,
-  name: "Antoinetta",
+  name: "Antonietta",
   email: "adaine5@samsung.com",
   gender: "F",
   multiplyNums: (num1, num2) => num1 * num2,
