@@ -80,26 +80,27 @@ function getInfo(num){
   return "Car " + num + " is a " + inventory[correct].car_year + " " + inventory[correct].car_make + " " + inventory[correct].car_model;
 }
 
-// console.log(getInfo(33));
+console.log(getInfo(33));
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
 let lastCar = inventory[(inventory.length-1)];
 let lastMakeModel = "The last car in your inventory is a " + lastCar.car_make + " " + lastCar.car_model + ".";
-// console.log(lastMakeModel); // returns "The last car in your inventory is a Lincoln Towncar."
+console.log(lastMakeModel); // returns "The last car in your inventory is a Lincoln Towncar."
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 
 let carModels = [];
 let carModelsSorted = [];
-/* for (let i=0; i < inventory.length; i++){
+for (let i=0; i < inventory.length; i++){
   // get car models
   // sort car models into new array
   // return new array
-  cardModelsSorted = carModelsSorted.map(carModels.push(inventory[i].car_model));
+  carModels.push(inventory[i].car_model);
+  carModelsSorted = carModels.sort();
 }
-console.log(carModelsSorted); */
+console.log(carModels);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
@@ -108,7 +109,7 @@ let carYears = [];
 for (let i=0; i < inventory.length; i++){
   carYears.push(inventory[i].car_year);
 }
-// console.log(carYears);
+console.log(carYears);
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
@@ -118,7 +119,7 @@ for (let i=0; i < carYears.length; i++){
     oldCars.push(carYears[i]);
   }
 }
-// console.log(oldCars);
+console.log(oldCars);
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
